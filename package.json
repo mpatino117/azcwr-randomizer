@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel client/index.html",
-    "build": "parcel build client/index.html -d build/output"
+    "build": "NODE_ENV=production parcel build client/index.html --no-minify"
   },
   "repository": {
     "type": "git",
