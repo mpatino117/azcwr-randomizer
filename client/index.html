@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>AZCWR Randomizer</title>
+  <!-- if she don't find you handsome, at least she'll find you handy -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="css/app.css" />
+
+</head>
+
+<body>
+  <section class="hero is-medium is-dark Banner is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          AZCWR Randomizer
+        </h1>
+        <h2 class="subtitle">
+          Looking for a project to work on? Don't worry we got you covered. This simple project will provide a project idea for you to start.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <div id="main">
+    <div class="columns">
+      <div class="column container">
+        <random-listing></random-listing>
+      </div>
+    </div>
+  </div>
+
+
+  <template id="listing">
+    <div class="container_listing">
+      <div class="columns">
+        <div class="column">
+          <p class="random_item title is-5" v-if="randomData.data == null">Pick a tier level from 1 to 4 on difficulty</p>
+          <p class="random_item title is-5 " v-else> {{randomData.data}} </p>
+          </p>
+        </div>
+      </div>
+      <div class="columns container_btn">
+        <div class="column">
+          <button class="button is-primary is-large" @click="randomizer(1)">Tier 1</button>
+        </div>
+        <div class="column">
+          <button class="button is-primary is-large" @click="randomizer(2)">Tier 2</button>
+        </div>
+        <div class="column">
+          <button class="button is-primary is-large" @click="randomizer(3)">Tier 3</button>
+        </div>
+        <div class="column">
+          <button class="button is-primary is-large" @click="randomizer(4)">Tier 4</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <strong>AZCWR Task Randomizer</strong> by
+          <a href="https://www.martinpatino.com">Martin Patino</a>
+          The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="js/lib/aja.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
