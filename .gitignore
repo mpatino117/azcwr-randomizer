@@ -59,7 +59,6 @@ typings/
 
 # Mac
 .DS_Store
-dist
 node_modules
 js/lib
 .cache
